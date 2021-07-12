@@ -4,7 +4,6 @@ import data.repositories.UserRepository;
 import exception.OAuth2AuthenticationProcessingException;
 import data.AuthProvider;
 import data.entities.User;
-import data.repositories.UserRepository;
 import security.UserPrincipal;
 import security.oauth2.user.GoogleOAuth2UserInfo;
 import security.oauth2.user.OAuth2UserInfo;

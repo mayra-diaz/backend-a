@@ -1,11 +1,14 @@
 package controller;
 
 import business.UserService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import data.dto.UserDTO;
 import data.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 import security.CurrentUser;
@@ -22,12 +25,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/user/me")
+    @GetMapping("/me")
     @PreAuthorize("hasRole('USER')")
     public User getCurrentUser(@CurrentUser UserPrincipal userPrincipal) {
         return userService.findOneById(userPrincipal.getId());
     }
-
 
     @PostMapping
     @PreAuthorize("hasRole('USER')")
@@ -59,8 +61,6 @@ public class UserController {
     public void deleteUserById(@PathVariable Long id){
         userService.eraseUserById(id) ;
     }
-
-
 
 
 }
