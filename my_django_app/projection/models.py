@@ -12,4 +12,4 @@ class EnrollmentProjection(models.Model):
     db_table = 'enrollment_projection'
 
   def __str__(self):
-    return self.name
+    return self.course_name

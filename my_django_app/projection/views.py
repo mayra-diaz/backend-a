@@ -5,3 +5,4 @@ def index(request):
 
 def utec(request):
     return render(request, 'projection/index.html')
+    
