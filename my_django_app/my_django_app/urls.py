@@ -18,10 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from projection import views
-from projection.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index), 
     path('', include('projection.urls'))
 ]

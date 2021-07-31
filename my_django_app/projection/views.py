@@ -13,7 +13,3 @@ class EnrollmentProjectionView(viewsets.ModelViewSet):
     queryset = EnrollmentProjection.objects.all()
     serializer_class = EnrollmentProjectionSerializer
 
-
-
-def index(request):
-    return render(request, 'projection/index.html')
