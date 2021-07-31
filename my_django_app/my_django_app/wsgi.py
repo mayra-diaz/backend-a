@@ -3,7 +3,7 @@ WSGI config for my_django_app project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
-For more information on this file, see
+For more information on this file, 
 https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
 """
 
@@ -11,6 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_django_app.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_django_app.settings.dev')
+
 
 application = get_wsgi_application()
